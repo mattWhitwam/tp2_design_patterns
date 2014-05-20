@@ -1,4 +1,4 @@
-package za.co.dwarfsun.designpaterns;
+package za.co.dwarfsun.designpatterns;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
