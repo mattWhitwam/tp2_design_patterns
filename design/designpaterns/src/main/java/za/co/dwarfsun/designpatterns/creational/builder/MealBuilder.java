@@ -4,16 +4,16 @@
  * and open the template in the editor.
  */
 
-package za.co.dwarfsun.designpatterns.creational.factorymethod;
+package za.co.dwarfsun.designpatterns.creational.builder;
 
 /**
  *
  * @author Matt
  */
-public class Cat extends Animal {
-
-    @Override
-    public String makeSound() {
-        return "Meow";
-    }
+public interface MealBuilder {
+    public void buildDrink();
+    public void buildMainCourse();
+    public void buildSide();
+    
+    public Meal getMeal();
 }

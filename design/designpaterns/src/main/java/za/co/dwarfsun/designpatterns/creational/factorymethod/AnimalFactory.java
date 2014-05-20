@@ -10,10 +10,13 @@ package za.co.dwarfsun.designpatterns.creational.factorymethod;
  *
  * @author Matt
  */
-public class Cat extends Animal {
-
-    @Override
-    public String makeSound() {
-        return "Meow";
+public class AnimalFactory {
+    
+    public Animal getAnimal(String type) {
+        if ("canine".equals(type)) {
+            return new Dog();
+        } else {
+            return new Cat();
+        }
     }
 }
