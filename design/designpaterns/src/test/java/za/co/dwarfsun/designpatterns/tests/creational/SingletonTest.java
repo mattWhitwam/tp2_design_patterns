@@ -7,10 +7,12 @@
 package za.co.dwarfsun.designpatterns.tests.creational;
 
 import static org.testng.Assert.*;
+import org.testng.annotations.Test;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import za.co.dwarfsun.designpatterns.creational.singleton.SingletonExample;
 
 /**
  *
@@ -20,13 +22,6 @@ public class SingletonTest {
     
     public SingletonTest() {
     }
-
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
-
     @BeforeClass
     public static void setUpClass() throws Exception {
     }
@@ -41,5 +36,17 @@ public class SingletonTest {
 
     @AfterMethod
     public void tearDownMethod() throws Exception {
+    }
+    // TODO add test methods here.
+    // The methods must be annotated with annotation @Test. For example:
+    //
+    // @Test
+    // public void hello() {}
+
+    @Test
+    public void testSingleton() {
+        SingletonExample s1 = SingletonExample.getInstance();
+        SingletonExample s2 = SingletonExample.getInstance();
+        assertSame(s1, s2, "Singleton test");   
     }
 }
